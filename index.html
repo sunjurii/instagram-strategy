@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>instagram strategy — sunjurii · handl.kr</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Noto+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --cream:#f0ead8;
+  --cream2:#e8e2d0;
+  --ink:#2a2620;
+  --ink2:#5a5248;
+  --ink3:#8a8278;
+  --olive:#6b8f5e;
+  --warm2:#a07850;
+  --border:#c8c0b0;
+}
+body{background:var(--cream);font-family:'Noto Sans KR','Noto Sans',sans-serif;color:var(--ink);}
+.page{max-width:1000px;margin:0 auto;padding:4rem 2rem;}
+.site-header{text-align:center;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+.title-img{max-width:520px;width:80%;display:block;margin:0 auto;}
+.site-sub{font-size:12px;color:var(--ink3);letter-spacing:0.25em;text-transform:uppercase;margin-top:10px;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.site-date{font-size:12px;color:var(--ink3);margin-top:4px;letter-spacing:0.1em;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.hero-placeholder{width:100%;height:220px;border:1px solid var(--border);margin-bottom:2.5rem;display:flex;align-items:center;justify-content:center;background:var(--cream2);}
+.hero-placeholder-text{font-size:10px;color:var(--ink3);letter-spacing:0.25em;text-transform:uppercase;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.hero{width:100%;max-height:320px;object-fit:cover;border:1px solid var(--border);margin-bottom:2.5rem;display:block;}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);}
+.col{padding:2.5rem;background:var(--cream);}
+.col:first-child{border-right:1px solid var(--border);}
+.col-head{margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border);}
+.handle-img{height:36px;display:block;}
+.col-type{font-size:10px;color:var(--ink3);letter-spacing:0.2em;text-transform:uppercase;margin-top:6px;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.manifesto{font-size:14px;color:var(--ink2);line-height:1.8;font-style:italic;padding:14px 0;border-top:1px dashed var(--border);border-bottom:1px dashed var(--border);margin-bottom:1.5rem;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.bar-section{margin-bottom:1.5rem;}
+.bar-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+.bar-name{font-size:12px;color:var(--ink2);width:100px;flex-shrink:0;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.bar-track{flex:1;height:4px;background:var(--cream2);border:1px solid var(--border);}
+.bar-fill{height:100%;}
+.bar-pct{font-size:11px;color:var(--ink3);width:28px;text-align:right;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.bucket{margin-bottom:12px;padding:12px 14px;border:1px solid var(--border);background:var(--cream2);}
+.bucket-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;}
+.bucket-name{font-size:13px;font-weight:700;letter-spacing:0.04em;color:var(--ink);font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.pct{font-size:11px;color:var(--ink3);font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.bucket-desc{font-size:13px;color:var(--ink2);line-height:1.6;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.bucket-tag{display:inline-block;font-size:9px;padding:2px 7px;border:1px solid;margin-top:6px;letter-spacing:0.1em;text-transform:uppercase;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.tag-green{border-color:var(--olive);color:var(--olive);}
+.tag-warm{border-color:var(--warm2);color:var(--warm2);}
+.freq{margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:6px;}
+.freq-tag{font-size:11px;padding:3px 9px;border:1px solid var(--border);color:var(--ink2);letter-spacing:0.05em;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+.ig-btn{display:block;width:100%;margin-top:1.5rem;padding:12px;text-align:center;font-family:'Noto Sans KR','Noto Sans',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);background:transparent;cursor:pointer;text-decoration:none;transition:background 0.2s,color 0.2s;}
+.ig-btn:hover{background:var(--ink);color:var(--cream);}
+.footer{text-align:center;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:10px;color:var(--ink3);letter-spacing:0.2em;text-transform:uppercase;font-family:'Noto Sans KR','Noto Sans',sans-serif;}
+@media(max-width:680px){
+  .cols{grid-template-columns:1fr;}
+  .col:first-child{border-right:none;border-bottom:1px solid var(--border);}
+  .page{padding:2rem 1rem;}
+  .title-img{width:90%;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="site-header">
+    <img src="title.png" class="title-img" alt="instagram strategy">
+    <p class="site-sub">sunjurii · handl.kr</p>
+    <p class="site-date">ongoing</p>
+  </div>
+
+  <!-- 이미지 넣으려면 아래 hero-placeholder 지우고 이 줄 주석 해제 후 파일명 수정 -->
+  <!-- <img src="hands.png" class="hero" alt="it's all in your hands"> -->
+  <div class="hero-placeholder">
+    <span class="hero-placeholder-text">image — it's all in your hands</span>
+  </div>
+
+  <div class="cols">
+    <div class="col">
+      <div class="col-head">
+        <img src="sunjurii.png" class="handle-img" alt="sunjurii" style="margin-left:-8px;">
+        <p class="col-type">personal account</p>
+      </div>
+      <p class="manifesto">나의 행보가 멋질 것. 그것을 콘텐츠로 만들고 '이 사람 뭐하는 사람이지? 뭔가 멋있다!'로 느껴지게 할 것.</p>
+
+      <div class="bar-section">
+        <p class="bar-label">content ratio</p>
+        <div class="bar-row"><span class="bar-name">정보+행동</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#c8d96b;"></div></div><span class="bar-pct">40%</span></div>
+        <div class="bar-row"><span class="bar-name">생각+인사이트</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#8fbb6e;"></div></div><span class="bar-pct">30%</span></div>
+        <div class="bar-row"><span class="bar-name">취향+무드</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:#6b8f5e;"></div></div><span class="bar-pct">30%</span></div>
+      </div>
+
+      <div class="bucket">
+        <div class="bucket-top"><span class="bucket-name">버킷 01 — 정보+행동</span><span class="pct">40%</span></div>
+        <p class="bucket-desc">직접 해봤고 결론이 있는 것. 가죽 커버, DIY, 이 방법이 낫더라.</p>
+        <span class="bucket-tag tag-green">릴스 위주</span>
+      </div>
+      <div class="bucket">
+        <div class="bucket-top"><span class="bucket-name">버킷 02 — 생각+인사이트</span><span class="pct">30%</span></div>
+        <p class="bucket-desc">"이 공간에서 이걸 느꼈다." 사진은 경험의 증거.</p>
+        <span class="bucket-tag tag-green">피드 캐러셀</span>
+      </div>
+      <div class="bucket">
+        <div class="bucket-top"><span class="bucket-name">버킷 03 — 취향+무드</span><span class="pct">30%</span></div>
+        <p class="bucket-desc">룩, 책, 데스크, 먹은 것. 짧은 한 줄이 붙어야 해.</p>
+        <span class="bucket-tag tag-green">피드/스토리</span>
+      </div>
+
+      <div class="freq">
+        <span class="freq-tag">릴스 주 2회</span>
+        <span class="freq-tag">피드 주 3회</span>
+        <span class="freq-tag">스토리 매일</span>
+      </div>
+      <a href="https://www.instagram.com/sunjurii" class="ig-btn" target="_blank">→ instagram @sunjurii</a>
+    </div>
+
+    <div class="col">
+      <div class="col-head">
+        <img src="handlkr.png" class="handle-img" alt="handl.kr" style="margin-left:-8px;">
+        <p class="col-type">portfolio account</p>
+      </div>
+      <p class="manifesto">보고 느끼고 쌓은 것들을 결국 일로 연결시킨다.</p>
+
+      <div class="bar-section">
+        <p class="bar-label">content ratio</p>
+        <div class="bar-row"><span class="bar-name">프로젝트</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#d4a96a;"></div></div><span class="bar-pct">60%</span></div>
+        <div class="bar-row"><span class="bar-name">인사이트</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:#a07850;"></div></div><span class="bar-pct">40%</span></div>
+      </div>
+
+      <div class="bucket">
+        <div class="bucket-top"><span class="bucket-name">프로젝트 게시물</span><span class="pct">60%</span></div>
+        <p class="bucket-desc">비하인드+결과물 캐러셀. 캡션은 "왜 이렇게 했는지". 한섬 / 이일 / 비노블라.</p>
+        <span class="bucket-tag tag-warm">캐러셀</span>
+      </div>
+      <div class="bucket">
+        <div class="bucket-top"><span class="bucket-name">인사이트 게시물</span><span class="pct">40%</span></div>
+        <p class="bucket-desc">경험에서 일로 연결. 여행, 공간, 읽은 책에서. 브루멜처럼.</p>
+        <span class="bucket-tag tag-warm">긴 캡션</span>
+      </div>
+
+      <div class="freq">
+        <span class="freq-tag">피드 위주</span>
+      </div>
+      <a href="https://www.instagram.com/handl.kr" class="ig-btn" target="_blank">→ instagram @handl.kr</a>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 sunjurii / handl.kr — visual & direction</div>
+</div>
+</body>
+</html>
